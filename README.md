@@ -6,4 +6,4 @@ The winner of the section wins it and their colour is shown
 The whole board is a giant tic tac toe game
 If you win three games that line up as three in a row you win!
 
-https://justint18.github.io/UltimateTicTacToe.html
+[CLICK HERE FOR TIC TAC TOE](https://justint18.github.io/UltimateTicTacToe.html)
