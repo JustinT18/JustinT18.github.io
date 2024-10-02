@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UltimateTicTacToe</title>
+        <!-- links the css file to style the buttons -->
+        <link rel="stylesheet" href="./style.css" />
+        <!-- links the js file to run functions -->
+        <script src="./UltimateTicTacToe.js"></script>
+    </head>
+
+    <!-- background -->
+    <body
+        background="https://wallpaperaccess.com/full/250581.jpg"
+        style="width: 1000; height: 1000; left: 100; bottom: 100"
+    >
+        <!-- First grid of buttons -->
+        <button
+            id="one"
+            style="position: absolute; bottom: 580px"
+            onclick="square[0] = getLetter(turn, 'one'); assignLetter('one', square[0]); turn = !turn; if (checkwin(square)) wincon1(square[0]);"
+        ></button>
+
+        <button
+            id="two"
+            style="position: absolute; bottom: 470px"
+            onclick="square[1] = getLetter(turn, 'two'); assignLetter('two', square[1]); turn = !turn; if (checkwin(square)) wincon1(square[1]);"
+        ></button>
+
+        <button
+            id="three"
+            style="position: absolute; bottom: 360px"
+            onclick="square[2] = getLetter(turn, 'three');assignLetter('three', square[2]); turn = !turn; if (checkwin(square)) wincon1(square[2]);"
+        ></button>
+
+        <button
+            id="four"
+            style="position: absolute; left: 120px; bottom: 580px"
+            onclick="square[3] = getLetter(turn, 'four'); assignLetter('four', square[3]); turn = !turn; if (checkwin(square)) wincon1(square[3]);"
+        ></button>
+
+        <button
+            id="five"
+            style="position: absolute; left: 120px; bottom: 470px"
+            onclick="square[4] = getLetter(turn, 'five'); assignLetter('five',  square[4]); turn = !turn; if (checkwin(square)) wincon1(square[4]);"
+        ></button>
+
+        <button
+            id="six"
+            style="position: absolute; left: 120px; bottom: 360px"
+            onclick="square[5] = getLetter(turn, 'six'); assignLetter('six', square[5]); turn = !turn; if (checkwin(square)) wincon1(square[5]);"
+        ></button>
+
+        <button
+            id="seven"
+            style="position: absolute; left: 230px; bottom: 580px"
+            onclick="square[6] = getLetter(turn, 'seven'); assignLetter('seven', square[6]); turn = !turn; if (checkwin(square)) wincon1(square[6]);"
+        ></button>
+
+        <button
+            id="eight"
+            style="position: absolute; left: 230px; bottom: 470px"
+            onclick="square[7] = getLetter(turn, 'eight'); assignLetter('eight', square[7]); turn = !turn; if (checkwin(square)) wincon1(square[7]);"
+        ></button>
+
+        <button
+            id="nine"
+            style="position: absolute; left: 230px; bottom: 360px"
+            onclick="square[8] = getLetter(turn, 'nine'); assignLetter('nine', square[8]); turn = !turn; if (checkwin(square)) wincon1(square[8]);"
+        ></button>
+
+        <!-- Second Grid -->
+
+        <button
+            id="ten"
+            style="position: absolute; bottom: 580px; left: 340px"
+            onclick="square2[0] = getLetter(turn, 'ten'); assignLetter('ten', square2[0]); turn = !turn; if (checkwin(square2)) wincon2(square2[0]);"
+        ></button>
+
+        <button
+            id="eleven"
+            style="position: absolute; bottom: 470px; left: 340px"
+            onclick="square2[1] = getLetter(turn, 'eleven'); assignLetter('eleven', square2[1]); turn = !turn; if (checkwin(square2)) wincon2(square2[1]);"
+        ></button>
+
+        <button
+            id="twelve"
+            style="position: absolute; bottom: 360px; left: 340px"
+            onclick="square2[2] = getLetter(turn, 'twelve'); assignLetter('twelve', square2[2]); turn = !turn; if (checkwin(square2)) wincon2(square2[2]);"
+        ></button>
+
+        <button
+            id="thirteen"
+            style="position: absolute; bottom: 580px; left: 450px"
+            onclick="square2[3] = getLetter(turn, 'thirteen'); assignLetter('thirteen', square2[3]); turn = !turn; if (checkwin(square2)) wincon2(square2[3]);"
+        ></button>
+
+        <button
+            id="fourteen"
+            style="position: absolute; bottom: 470px; left: 450px"
+            onclick="square2[4] = getLetter(turn, 'fourteen'); assignLetter('fourteen', square2[4]); turn = !turn; if (checkwin(square2)) wincon2(square2[4]);"
+        ></button>
+
+        <button
+            id="fifteen"
+            style="position: absolute; bottom: 360px; left: 450px"
+            onclick="square2[5] = getLetter(turn, 'fifteen'); assignLetter('fifteen', square2[5]); turn = !turn; if (checkwin(square2)) wincon2(square2[5]);"
+        ></button>
+
+        <button
+            id="sixteen"
+            style="position: absolute; bottom: 580px; left: 560px"
+            onclick="square2[6] = getLetter(turn, 'sixteen'); assignLetter('sixteen', square2[6]); turn = !turn; if (checkwin(square2)) wincon2(square2[6]);"
+        ></button>
+
+        <button
+            id="seventeen"
+            style="position: absolute; bottom: 470px; left: 560px"
+            onclick="square2[7] = getLetter(turn, 'seventeen'); assignLetter('seventeen', square2[7]); turn = !turn; if (checkwin(square2)) wincon2(square2[7]);"
+        ></button>
+
+        <button
+            id="eighteen"
+            style="position: absolute; bottom: 360px; left: 560px"
+            onclick="square2[8] = getLetter(turn, 'eighteen'); assignLetter('eighteen', square2[8]); turn = !turn; if (checkwin(square2)) wincon2(square2[8]);"
+        ></button>
+
+        <!--Grid Three-->
+
+        <button
+            id="nineteen"
+            style="position: absolute; bottom: 580px; left: 670px"
+            onclick="square3[0] = getLetter(turn, 'nineteen'); assignLetter('nineteen', square3[0]); turn = !turn; if (checkwin(square3)) wincon3(square3[0]);"
+        ></button>
+
+        <button
+            id="twenty"
+            style="position: absolute; bottom: 470px; left: 670px"
+            onclick="square3[1] = getLetter(turn, 'twenty'); assignLetter('twenty', square3[1]); turn = !turn; if (checkwin(square3)) wincon3(square3[1]);"
+        ></button>
+
+        <button
+            id="twentyone"
+            style="position: absolute; bottom: 360px; left: 670px"
+            onclick="square3[2] = getLetter(turn, 'twentyone'); assignLetter('twentyone', square3[2]); turn = !turn; if (checkwin(square3)) wincon3(square3[2]);"
+        ></button>
+
+        <button
+            id="twentytwo"
+            style="position: absolute; bottom: 580px; left: 780px"
+            onclick="square3[3] = getLetter(turn, 'twentytwo'); assignLetter('twentytwo', square3[3]); turn = !turn; if (checkwin(square3)) wincon3(square3[3]);"
+        ></button>
+
+        <button
+            id="twentythree"
+            style="position: absolute; bottom: 470px; left: 780px"
+            onclick="square3[4] = getLetter(turn, 'twentythree'); assignLetter('twentythree', square3[4]); turn = !turn; if (checkwin(square3)) wincon3(square3[4]);"
+        ></button>
+
+        <button
+            id="twentyfour"
+            style="position: absolute; bottom: 360px; left: 780px"
+            onclick="square3[5] = getLetter(turn, 'twentyfour'); assignLetter('twentyfour', square3[5]); turn = !turn; if (checkwin(square3)) wincon3(square3[5]);"
+        ></button>
+
+        <button
+            id="twentyfive"
+            style="position: absolute; bottom: 580px; left: 890px"
+            onclick="square3[6] = getLetter(turn, 'twentyfive'); assignLetter('twentyfive', square3[6]); turn = !turn; if (checkwin(square3)) wincon3(square3[6]);"
+        ></button>
+
+        <button
+            id="twentysix"
+            style="position: absolute; bottom: 470px; left: 890px"
+            onclick="square3[7] = getLetter(turn, 'twentysix'); assignLetter('twentysix', square3[7]); turn = !turn; if (checkwin(square3)) wincon3(square3[7]);"
+        ></button>
+
+        <button
+            id="twentyseven"
+            style="position: absolute; bottom: 360px; left: 890px"
+            onclick="square3[8] = getLetter(turn, 'twentyseven'); assignLetter('twentyseven', square3[8]); turn = !turn; if (checkwin(square3)) wincon3(square3[8]);"
+        ></button>
+
+        <!--Griddy 4-->
+
+        <button
+            id="twentyeight"
+            style="position: absolute; bottom: 250px"
+            onclick="square4[0] = getLetter(turn, 'twentyeight'); assignLetter('twentyeight', square4[0]); turn = !turn; if (checkwin(square4)) wincon4(square4[0]);"
+        ></button>
+
+        <button
+            id="twentynine"
+            style="position: absolute; bottom: 140px"
+            onclick="square4[1] = getLetter(turn, 'twentynine'); assignLetter('twentynine', square4[1]); turn = !turn; if (checkwin(square4)) wincon4(square4[1]);"
+        ></button>
+
+        <button
+            id="thirty"
+            style="position: absolute; bottom: 30px"
+            onclick="square4[2] = getLetter(turn, 'thirty');assignLetter('thirty', square4[2]); turn = !turn; if (checkwin(square4)) wincon4(square4[2]);"
+        ></button>
+
+        <button
+            id="thirtyone"
+            style="position: absolute; left: 120px; bottom: 250px"
+            onclick="square4[3] = getLetter(turn, 'thirtyone'); assignLetter('thirtyone', square4[3]); turn = !turn; if (checkwin(square4)) wincon4(square4[3]);"
+        ></button>
+
+        <button
+            id="thirtytwo"
+            style="position: absolute; left: 120px; bottom: 140px"
+            onclick="square4[4] = getLetter(turn, 'thirtytwo'); assignLetter('thirtytwo',  square4[4]); turn = !turn; if (checkwin(square4)) wincon4(square4[4]);"
+        ></button>
+
+        <button
+            id="thirtythree"
+            style="position: absolute; left: 120px; bottom: 30px"
+            onclick="square4[5] = getLetter(turn, 'thirtythree'); assignLetter('thirtythree', square4[5]); turn = !turn; if (checkwin(square4)) wincon4(square4[5]);"
+        ></button>
+
+        <button
+            id="thirtyfour"
+            style="position: absolute; left: 230px; bottom: 250px"
+            onclick="square4[6] = getLetter(turn, 'thirtyfour'); assignLetter('thirtyfour', square4[6]); turn = !turn; if (checkwin(square4)) wincon4(square4[6]);"
+        ></button>
+
+        <button
+            id="thirtyfive"
+            style="position: absolute; left: 230px; bottom: 140px"
+            onclick="square4[7] = getLetter(turn, 'thirtyfive'); assignLetter('thirtyfive', square4[7]); turn = !turn; if (checkwin(square4)) wincon4(square4[7]);"
+        ></button>
+
+        <button
+            id="thirtysix"
+            style="position: absolute; left: 230px; bottom: 30px"
+            onclick="square4[8] = getLetter(turn, 'thirtysix'); assignLetter('thirtysix', square4[8]); turn = !turn; if (checkwin(square4)) wincon4(square4[8]);"
+        ></button>
+        
+        <!--fith griddy-->
+        <button
+            id="thirtyseven"
+            style="position: absolute; bottom: 250px; left: 340px"
+            onclick="square5[0] = getLetter(turn, 'thirtyseven'); assignLetter('thirtyseven', square5[0]); turn = !turn; if (checkwin(square5)) wincon5(square5[0]);"
+        ></button>
+
+        <button
+            id="thirtyeight"
+            style="position: absolute; bottom: 140px; left: 340px"
+            onclick="square5[1] = getLetter(turn, 'thirtyeight'); assignLetter('thirtyeight', square5[1]); turn = !turn; if (checkwin(square5)) wincon5(square5[1]);"
+        ></button>
+
+        <button
+            id="thirtynine"
+            style="position: absolute; bottom: 30px; left: 340px"
+            onclick="square5[2] = getLetter(turn, 'thirtynine'); assignLetter('thirtynine', square5[2]); turn = !turn; if (checkwin(square5)) wincon5(square5[2]);"
+        ></button>
+
+        <button
+            id="forty"
+            style="position: absolute; bottom: 250px; left: 450px"
+            onclick="square5[3] = getLetter(turn, 'forty'); assignLetter('forty', square5[3]); turn = !turn; if (checkwin(square5)) wincon5(square5[3]);"
+        ></button>
+
+        <button
+            id="fortyone"
+            style="position: absolute; bottom: 140px; left: 450px"
+            onclick="square5[4] = getLetter(turn, 'fortyone'); assignLetter('fortyone', square5[4]); turn = !turn; if (checkwin(square5)) wincon5(square5[4]);"
+        ></button>
+
+        <button
+            id="fortytwo"
+            style="position: absolute; bottom: 30px; left: 450px"
+            onclick="square5[5] = getLetter(turn, 'fortytwo'); assignLetter('fortytwo', square5[5]); turn = !turn; if (checkwin(square5)) wincon5(square5[5]);"
+        ></button>
+
+        <button
+            id="fortythree"
+            style="position: absolute; bottom: 250px; left: 560px"
+            onclick="square5[6] = getLetter(turn, 'fortythree'); assignLetter('fortythree', square5[6]); turn = !turn; if (checkwin(square5)) wincon5(square5[6]);"
+        ></button>
+
+        <button
+            id="fortyfour"
+            style="position: absolute; bottom: 140px; left: 560px"
+            onclick="square5[7] = getLetter(turn, 'fortyfour'); assignLetter('fortyfour', square5[7]); turn = !turn; if (checkwin(square5)) wincon5(square5[7]);"
+        ></button>
+
+        <button
+            id="fortyfive"
+            style="position: absolute; bottom: 30px; left: 560px"
+            onclick="square5[8] = getLetter(turn, 'fortyfive'); assignLetter('fortyfive', square5[8]); turn = !turn; if (checkwin(square5)) wincon5(square5[8]);"
+        ></button>
+
+        <!--Grid 6-->
+        <button
+            id="fortysix"
+            style="position: absolute; bottom: 250px; left: 670px"
+            onclick="square6[0] = getLetter(turn, 'fortysix'); assignLetter('fortysix', square6[0]); turn = !turn; if (checkwin(square6)) wincon6(square6[0]);"
+        ></button>
+
+        <button
+            id="fortyseven"
+            style="position: absolute; bottom: 140px; left: 670px"
+            onclick="square6[1] = getLetter(turn, 'fortyseven'); assignLetter('fortyseven', square6[1]); turn = !turn; if (checkwin(square6)) wincon6(square6[1]);"
+        ></button>
+
+        <button
+            id="fortyeight"
+            style="position: absolute; bottom: 30px; left: 670px"
+            onclick="square6[2] = getLetter(turn, 'fortyeight'); assignLetter('fortyeight', square6[2]); turn = !turn; if (checkwin(square6)) wincon6(square6[2]);"
+        ></button>
+
+        <button
+            id="fortynine"
+            style="position: absolute; bottom: 250px; left: 780px"
+            onclick="square6[3] = getLetter(turn, 'fortynine'); assignLetter('fortynine', square6[3]); turn = !turn; if (checkwin(square6)) wincon6(square6[3]);"
+        ></button>
+
+        <button
+            id="fifty"
+            style="position: absolute; bottom: 140px; left: 780px"
+            onclick="square6[4] = getLetter(turn, 'fifty'); assignLetter('fifty', square6[4]); turn = !turn; if (checkwin(square6)) wincon6(square6[4]);"
+        ></button>
+
+        <button
+            id="fiftyone"
+            style="position: absolute; bottom: 30px; left: 780px"
+            onclick="square6[5] = getLetter(turn, 'fiftyone'); assignLetter('fiftyone', square6[5]); turn = !turn; if (checkwin(square6)) wincon6(square6[5]);"
+        ></button>
+
+        <button
+            id="fiftytwo"
+            style="position: absolute; bottom: 250px; left: 890px"
+            onclick="square6[6] = getLetter(turn, 'fiftytwo'); assignLetter('fiftytwo', square6[6]); turn = !turn; if (checkwin(square6)) wincon6(square6[6]);"
+        ></button>
+
+        <button
+            id="fiftythree"
+            style="position: absolute; bottom: 140px; left: 890px"
+            onclick="square6[7] = getLetter(turn, 'fiftythree'); assignLetter('fiftythree', square6[7]); turn = !turn; if (checkwin(square6)) wincon6(square6[7]);"
+        ></button>
+
+        <button
+            id="fiftyfour"
+            style="position: absolute; bottom: 30px; left: 890px"
+            onclick="square6[8] = getLetter(turn, 'fiftyfour'); assignLetter('fiftyfour', square6[8]); turn = !turn; if (checkwin(square6)) wincon6(square6[8]);"
+        ></button>
+
+        <!--7th Grid-->
+        <button
+            id="fiftyfive"
+            style="position: absolute; bottom: -80px"
+            onclick="square7[0] = getLetter(turn, 'fiftyfive'); assignLetter('fiftyfive', square7[0]); turn = !turn; if (checkwin(square7)) wincon7(square7[0]);"
+        ></button>
+
+        <button
+            id="fiftysix"
+            style="position: absolute; bottom: -190px"
+            onclick="square7[1] = getLetter(turn, 'fiftysix'); assignLetter('fiftysix', square7[1]); turn = !turn; if (checkwin(square7)) wincon7(square7[1]);"
+        ></button>
+
+        <button
+            id="fiftyseven"
+            style="position: absolute; bottom: -300px"
+            onclick="square7[2] = getLetter(turn, 'fiftyseven');assignLetter('fiftyseven', square7[2]); turn = !turn; if (checkwin(square7)) wincon7(square7[2]);"
+        ></button>
+
+        <button
+            id="fiftyeight"
+            style="position: absolute; left: 120px; bottom: -80px"
+            onclick="square7[3] = getLetter(turn, 'fiftyeight'); assignLetter('fiftyeight', square7[3]); turn = !turn; if (checkwin(square7)) wincon7(square7[3]);"
+        ></button>
+
+        <button
+            id="fiftynine"
+            style="position: absolute; left: 120px; bottom: -190px"
+            onclick="square7[4] = getLetter(turn, 'fiftynine'); assignLetter('fiftynine',  square7[4]); turn = !turn; if (checkwin(square7)) wincon7(square7[4]);"
+        ></button>
+
+        <button
+            id="sixty"
+            style="position: absolute; left: 120px; bottom: -300px"
+            onclick="square7[5] = getLetter(turn, 'sixty'); assignLetter('sixty', square7[5]); turn = !turn; if (checkwin(square7)) wincon7(square7[5]);"
+        ></button>
+
+        <button
+            id="sixtyone"
+            style="position: absolute; left: 230px; bottom: -80px"
+            onclick="square7[6] = getLetter(turn, 'sixtyone'); assignLetter('sixtyone', square7[6]); turn = !turn; if (checkwin(square7)) wincon7(square7[6]);"
+        ></button>
+
+        <button
+            id="sixtytwo"
+            style="position: absolute; left: 230px; bottom: -190px"
+            onclick="square7[7] = getLetter(turn, 'sixtytwo'); assignLetter('sixtytwo', square7[7]); turn = !turn; if (checkwin(square7)) wincon7(square7[7]);"
+        ></button>
+
+        <button
+            id="sixtythree"
+            style="position: absolute; left: 230px; bottom: -300px"
+            onclick="square7[8] = getLetter(turn, 'sixtythree'); assignLetter('sixtythree', square7[8]); turn = !turn; if (checkwin(square7)) wincon7(square7[8]);"
+        ></button>
+
+        <!--8 Grid/2nd last grid-->
+
+        <button
+            id="sixtyfour"
+            style="position: absolute; bottom: -80px; left: 340px"
+            onclick="square8[0] = getLetter(turn, 'sixtyfour'); assignLetter('sixtyfour', square8[0]); turn = !turn; if (checkwin(square8)) wincon8(square8[0]);"
+        ></button>
+
+        <button
+            id="sixtyfive"
+            style="position: absolute; bottom: -190px; left: 340px"
+            onclick="square8[1] = getLetter(turn, 'sixtyfive'); assignLetter('sixtyfive', square8[1]); turn = !turn; if (checkwin(square8)) wincon8(square8[1]);"
+        ></button>
+
+        <button
+            id="sixtysix"
+            style="position: absolute; bottom: -300px; left: 340px"
+            onclick="square8[2] = getLetter(turn, 'sixtysix'); assignLetter('sixtysix', square8[2]); turn = !turn; if (checkwin(square8)) wincon8(square8[2]);"
+        ></button>
+
+        <button
+            id="sixtyseven"
+            style="position: absolute; bottom: -80px; left: 450px"
+            onclick="square8[3] = getLetter(turn, 'sixtyseven'); assignLetter('sixtyseven', square8[3]); turn = !turn; if (checkwin(square8)) wincon8(square8[3]);"
+        ></button>
+
+        <button
+            id="sixtyeight"
+            style="position: absolute; bottom: -190px; left: 450px"
+            onclick="square8[4] = getLetter(turn, 'sixtyeight'); assignLetter('sixtyeight', square8[4]); turn = !turn; if (checkwin(square8)) wincon8(square8[4]);"
+        ></button>
+
+        <button
+            id="sixtynine"
+            style="position: absolute; bottom: -300px; left: 450px"
+            onclick="square8[5] = getLetter(turn, 'sixtynine'); assignLetter('sixtynine', square8[5]); turn = !turn; if (checkwin(square8)) wincon8(square8[5]);"
+        ></button>
+
+        <button
+            id="seventy"
+            style="position: absolute; bottom: -80px; left: 560px"
+            onclick="square8[6] = getLetter(turn, 'seventy'); assignLetter('seventy', square8[6]); turn = !turn; if (checkwin(square8)) wincon8(square8[6]);"
+        ></button>
+
+        <button
+            id="seventyone"
+            style="position: absolute; bottom: -190px; left: 560px"
+            onclick="square8[7] = getLetter(turn, 'seventyone'); assignLetter('seventyone', square8[7]); turn = !turn; if (checkwin(square8)) wincon8(square8[7]);"
+        ></button>
+
+        <button
+            id="seventytwo"
+            style="position: absolute; bottom: -300px; left: 560px"
+            onclick="square8[8] = getLetter(turn, 'seventytwo'); assignLetter('seventytwo', square8[8]); turn = !turn; if (checkwin(square8)) wincon8(square8[8]);"
+        ></button>
+
+        <!--The Last Griddy-->
+        <button
+            id="seventythree"
+            style="position: absolute; bottom: -80px; left: 670px"
+            onclick="square9[0] = getLetter(turn, 'seventythree'); assignLetter('seventythree', square9[0]); turn = !turn; if (checkwin(square9)) wincon9(square9[0]);"
+        ></button>
+
+        <button
+            id="seventyfour"
+            style="position: absolute; bottom: -190px; left: 670px"
+            onclick="square9[1] = getLetter(turn, 'seventyfour'); assignLetter('seventyfour', square9[1]); turn = !turn; if (checkwin(square9)) wincon9(square9[1]);"
+        ></button>
+
+        <button
+            id="seventyfive"
+            style="position: absolute; bottom: -300px; left: 670px"
+            onclick="square9[2] = getLetter(turn, 'seventyfive'); assignLetter('seventyfive', square9[2]); turn = !turn; if (checkwin(square9)) wincon9(square9[2]);"
+        ></button>
+
+        <button
+            id="seventysix"
+            style="position: absolute; bottom: -80px; left: 780px"
+            onclick="square9[3] = getLetter(turn, 'seventysix'); assignLetter('seventysix', square9[3]); turn = !turn; if (checkwin(square9)) wincon9(square9[3]);"
+        ></button>
+
+        <button
+            id="seventyseven"
+            style="position: absolute; bottom: -190px; left: 780px"
+            onclick="square9[4] = getLetter(turn, 'seventyseven'); assignLetter('seventyseven', square9[4]); turn = !turn; if (checkwin(square9)) wincon9(square9[4]);"
+        ></button>
+
+        <button
+            id="seventyeight"
+            style="position: absolute; bottom: -300px; left: 780px"
+            onclick="square9[5] = getLetter(turn, 'seventyeight'); assignLetter('seventyeight', square9[5]); turn = !turn; if (checkwin(square9)) wincon9(square9[5]);"
+        ></button>
+
+        <button
+            id="seventynine"
+            style="position: absolute; bottom: -80px; left: 890px"
+            onclick="square9[6] = getLetter(turn, 'seventynine'); assignLetter('seventynine', square9[6]); turn = !turn; if (checkwin(square9)) wincon9(square9[6]);"
+        ></button>
+
+        <button
+            id="eighty"
+            style="position: absolute; bottom: -190px; left: 890px"
+            onclick="square9[7] = getLetter(turn, 'eighty'); assignLetter('eighty', square9[7]); turn = !turn; if (checkwin(square9)) wincon9(square9[7]);"
+        ></button>
+
+        <button
+            id="eightyone"
+            style="position: absolute; bottom: -300px; left: 890px"
+            onclick="square9[8] = getLetter(turn, 'eightyone'); assignLetter('eightyone', square9[8]); turn = !turn; if (checkwin(square9)) wincon9(square9[8]);"
+        ></button>
+
+        <input
+            type="reset"
+            id="reset"
+            style="position: absolute; left: 1050px; bottom: 600px"
+            onclick="reset()"
+        />
+
+    </body>
+</html>
