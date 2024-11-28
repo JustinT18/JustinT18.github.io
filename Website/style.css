@@ -1,66 +1,87 @@
-
-#box {
-    width:fit-content;
-    height:fit-content;
-    background-color: #ff0000;
-    border-bottom: 10px solid;
-    border-right: 10px solid;
-    border-top: 10px solid;
-    border-left: 10px solid;
-    font-size: 45px;
-    text-align: center;
-    font-weight: 600;
-    padding: 15px 32px;
-    /* display: inline-block; */
-    margin: auto;
-    cursor: pointer;
-    border-color: #ffffff;
-    justify-content: center;
-    
+body {
+    background: url('https://wallpaperaccess.com/full/250581.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#reset {
-    width:fit-content;
-    height:fit-content;
-    background-color: #ff0000;
-    border-bottom: 10px solid;
-    border-right: 10px solid;
-    border-top: 10px solid;
-    border-left: 10px solid;
-    font-size: 45px;
-    text-align: center;
-    font-weight: 600;
-    padding: 15px 32px;
-    /* display: inline-block; */
-    margin: auto;
-    cursor: pointer;
-    border-color: #ffffff;
-    justify-content: center;
+/* General styles */
+#box, #reset {
+    width: 90%; /* Make it fit within the screen */
+    max-width: 600px; /* Limit the size for large screens */
+    margin: 20px auto; /* Center it horizontally */
+    font-size: 1.2em; /* Use relative font sizes */
 }
 
-#title  {
-    font-size:xxx-large;
+#title {
+    font-size: 2rem; /* Adjust title font size */
     color: #ffffff;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
     font-weight: bolder;
+    margin-top: 20px;
 }
 
-#body   {
-    font-size: x-large;
+#body {
+    font-size: 1rem; /* Adjust font size for smaller screens */
     color: blue;
     text-align: center;
-    text-shadow: black;
-    margin-top: auto;
-    justify-content: center;
-    
+    text-shadow: 0px 1px 3px black;
+    margin: 10px 0;
 }
 
-#x  {
-    width: 50px;
-    height: 50px;
-    /* position: relative; */
-    position: static;
-    /* bottom: auto; */
-    bottom: 0;
+#x {
+    width: 40px; /* Reduce icon size */
+    height: 40px;
+    margin: 5px; /* Add spacing */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #title {
+        font-size: 1.5rem;
+    }
+
+    #box, #reset {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #x {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #title {
+        font-size: 1.2rem;
+    }
+
+    #box, #reset {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    #x {
+        width: 25px;
+        height: 25px;
+    }
+}
+video {
+    width: 100%; /* Make video width scale */
+    max-width: 600px; /* Limit the width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Avoid inline spacing issues */
+    margin: 0 auto; /* Center it */
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
 }
